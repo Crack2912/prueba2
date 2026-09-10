@@ -1,0 +1,118 @@
+ialas pruebas necesarios en comando de github
+
+creacion de github 
+primero ubicarme en la carpeta 
+cd "la ubicacion de la carpeta"
+segundo inicializar
+git init 
+tercero configuramos el nombre usuario de github
+git config user.name "nombredelusuario"
+cuarto configuremos el email de github
+git config user.smail "correodegithub"
+quinto crear la comunicacion con el repositorio local con el repositorio remoto
+git remote add origin "url de nuestro repositorio remoto"
+
+
+
+como pasar un archivo de nuestro repositorio local a nuestro repositorio remoto
+primero paso: se crea un texto de prueba en la carpeta local de github
+creacion de la carpeta
+segundo paso:se ve el estado del github local
+git status
+tercero paso:se agrega la carpeta que no estaba al github de forma local
+git add nombre de la carpeta.txt
+cuarto paso:confirmamos lo subido del nuevo txt 
+git commit -m "estoy seguro de este commit 1"
+quinto paso:agregamos el push para que se vea el repositorio remoto
+git push -u origin master
+
+clonar un repositorio completo
+primer paso: estamos en la carpeta nueva (nombrecarpeta:clonar) le damos clib 
+derecho y sal guthub batch here una ves en el comand de github se usa el comando 
+
+$ git clone https://github.com/Crack2912/pruebagit
+
+comando pull: este comando se usa cuando dos programadores hacen cambio en la misma
+contenedory crea o añade un archivo , el cual solo queremos descagar ese nuevo 
+archivo o nuevos archivos sin estas buscando y descargando manuelamente
+le damos clib a la carpeta remota de github y clib derecho ,seleccionamos el que 
+dice github batch here ,abre una nueva consola, en la nueva consola colocamos 
+(automaticamente descarga dentro de la carpeta los nuevos archivos que se han 
+colocado en la forma remote con el comando añadido):
+
+git pull origin master 
+
+
+creaciones de ramas: son importante para poder crear ramas que no puedan ver 
+los demas usuarios 
+primero paso:para ver cuantas ramas tenemos es el comando:
+git branch
+
+segundo paso:como crear una nueva rama
+git branch rama1
+
+tercer paso: como cambiar el nombre de la rama si no me gusto
+git branch -m rama1 ramita1
+
+cuarto paso:como cambiar de la rama general o master a la subrama creada
+git checkout ramita1
+
+quinto paso:verifcacion del cambio 
+git branch
+
+sexto paso:como eliminar la rama creada(tenemos que estar en la rama general para
+eliminar)
+git branch -d ramita1
+
+septimo paso:como crear dentro de la interfaz un txt 
+touch "text.txt"
+touch "text2.txt"
+
+octavo paso:necesitamos confirmar que es un cambio exclusivo de la rama1
+git add .
+luego 
+git commit -m "Estoy commiteando los arch"
+
+que paso ahora, pasa que los nuevbos archivos creados dentro de la rama1 
+y solo le va a mostrar a rama1 no a master
+
+como guardar las actualizaciones de github luego de realizar cambios 
+git add achivo.txt
+git commit -m "cambios en el archivo"
+git checkout master 
+
+o usando el comando mas moder
+git switch mastere
+
+
+
+temas marge y diff
+primer paso: el comando diff muestra los archivos que le falta a la rama general
+siempre en cambio se cree y se guarde dentro de la rama1 , se usa mas como
+comparativo 
+git diff master rama1
+git diff rama1 master
+
+(tomar en cuenta que cuadno se ejecuto el comando diff ocurrio que no termino 
+de mostrar lo que debia mostrar, se usa letra q para terminar el proceso)
+
+segundo paso: usar el comando marge, cuando se necesite unificar la subramas 
+git merge rama1 master
+
+tercer paso: guardar los cambios 
+git add-
+git commit -m cambiosMaster
+
+
+como generar el acces token
+primero paso:inicializar 
+git init
+segundo paso:configurar el user.name
+git config user.name Crack2912
+tercer paso:configurar el correo
+git config user.email "correo"
+cuarto paso:colocar el token creado en git hub
+en el perfil entramos a seettings 
+entrar a developer settings
+generar tokens personarl access tokens.tokens (classic)
+git name.password "se copia el link generado por github"
